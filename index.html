@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <title>Tooltip+Form</title>
+
+</head>
+<body>
+    <!-- 
+        1.HOME PAGE - 2 BUTTON{1.SIGN UP 2. SIGN IN} + LINK-"FORGOT PASSWORD"
+     -->
+     <h1 style="font-size:100px" class="text-center text-lead text-light mb-5 mt-5">JavaCode Academy</h1>
+     <div class="container d-flex flex-column justify-content-center ">
+
+     <button type="button" class="btn btn-primary btn-lg  mb-3 mt-5"  data-toggle="modal" data-target="#create">CREATE AN ACCOUNT</button type="button">
+     <button type="button" class="btn btn-danger btn-lg mb-3" data-toggle="modal" data-target="#signin">SIGN IN</button>
+     <a href="#" class="text-center">Forgot password?</a>
+
+     <!-- SignUp_Modal_Form -->
+
+    <div class="modal fade" id="create">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="header bg-primary">
+                    <button type="button" class="close btn btn-sm btn-danger" data-dismiss="modal" >
+                        <span  class=" btn btn-danger ">&lotimes;</span>
+                    </button>
+                    <h2 class=" text-light model-title text-center" id="create">Create An Account</h2>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group row">
+                            <div class="form-group col-6">
+                                <label for="firstName" class="text-primary">First Name</label>
+                                <input type="text" id="firstName" class="form-control" placeholder="e.g: Javakhir">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="lastName" class="text-primary">Last Name</label>
+                                <input type="text" class="form-control" placeholder="e.g: Bazarov">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="text-primary">Email</label>
+                            <input type="email" class="form-control" placeholder="e.g: javakhir.bazarov@gamil.com">
+                        </div>
+                        <div class="form-group">
+                        <div class="form-group">
+                            <label for="password" class="text-primary">Password</label>
+                            <input type="password" class="form-control" name="" id="password">
+                        </div>
+                        <div class="form-group column">
+                            <label for="confirm" class="text-primary">Confirm your password</label>
+                            <input type="password" class="form-control" name="" id="confirm">
+                        </div>
+                    </div>
+
+                    <div id="from-datepicker" class="form-group row">
+                        <div class="form-group ml-3">
+                        <p class="text-lead text-primary">Birthday</p>
+                        <input type="date" class="form-control"></input>
+                        </div>
+
+                        <div class="link text-lead col-6 mt-4 pt-2" >
+                            <a href="#">Why do I need to provide my date of birth?</a>
+                        </div>
+                    </div>
+                    <p class="text-primary">Gender</p>
+                    <div class="form-inline ">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="male" name="materialExampleRadios">
+                            <label for="male" class="form-check-label mr-5">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="male" name="materialExampleRadios"> 
+                            <label for="female" class="form-check-label">Female</label>
+                        </div>
+                    </div>
+
+                 <div class="model-footer">
+                    <p class="text-muted mt-4">By clicking Sign Up, you agree to our <a href="#">Terms, Data Policy</a> and <a href="#">Cookie Policy.</a> You may receive SMS notifications from us and can opt out at any time.
+                    </p>
+                 </div>
+                    <button class="btn btn-lg col-12 btn-success">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SignIn_Modal_Form -->
+
+    <div class="modal fade mt-5" id="signin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="header bg-primary">
+                    <button type="button" class="close btn btn-danger" data-dismiss="modal">
+                        <span class="btn btn-danger " id="signin">&times;</span>
+                    </button>
+                    <h2 class="text-center text-light mt-2">Login</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="input-group mb-3 mt-4">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="email" placeholder="Enter your email.." class="form-control">
+                        </div>
+
+                        <div class="input-group mb-3 ">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <button class="btn btn-success col-12 mt-3 mb-2">Login</button>
+                        <div class="links offset-2 mt-3">
+                        <a class="col-6 mr-5" href="#">Forgot password?</a>
+                        <a class="col-6" href="#">Sign Up</a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+    <script src="js/main.js"></script>
+</body>
+</html>
